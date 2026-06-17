@@ -13,10 +13,6 @@ from product import (products as pro,
 import json, random, os, uuid
 import requests
 
-from vercel_kv import kv
-kv.set("users", users)
-users = kv.get("users")
-
 from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # needed for flash messages
