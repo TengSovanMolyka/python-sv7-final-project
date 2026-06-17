@@ -1,0 +1,235 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background: #e1e1e1;
+    color: #111827;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero-section {
+    color: #fff;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* overlay for readability */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-text {
+    font-size: 16px;
+    color: #d1d5db;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-section .carousel-item img {
+    height: 420px; /* smaller height */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.hero-section .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 500px;
+}
+
+.hero-section .hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   FILTER SIDEBAR
+========================= */
+.filter-section,
+.bg-white.p-4.rounded-4.shadow-sm {
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.filter-section h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.filter-section .form-label {
+    font-size: 14px;
+    color: #374151;
+}
+
+.filter-section .form-control,
+.filter-section .form-select {
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    transition: 0.3s ease;
+}
+
+.filter-section .form-control:focus,
+.filter-section .form-select:focus {
+    border-color: #111827;
+    box-shadow: 0 0 0 3px rgba(17,24,39,0.1);
+}
+
+/* =========================
+   LIVE SEARCH
+========================= */
+#liveSearch {
+    border-radius: 10px;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-dark,
+.btn-outline-dark,
+.btn-light {
+    border-radius: 10px;
+    padding: 12px 22px;
+    transition: 0.3s ease;
+}
+
+.btn-dark:hover,
+.btn-outline-dark:hover,
+.btn-light:hover,
+.btn-success:hover{
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    border-radius: 10px;
+    padding: 12px 22px;
+    transition: 0.3s ease;
+}
+
+/* =========================
+   BADGE
+========================= */
+.badge {
+    border-radius: 20px;
+    font-weight: 500;
+    padding: 8px 14px;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+.pagination .page-link {
+    border-radius: 8px;
+    margin: 0 4px;
+    font-weight: 600;
+    color: #111827;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    transition: 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+}
+
+.pagination .page-item.active .page-link {
+    background: #111827;
+    border-color: #111827;
+    color: #fff;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #9ca3af;          /* grey text */
+    background: #f3f4f6;     /* light grey background */
+    border-color: #e5e7eb;
+    pointer-events: none;    /* prevent clicks */
+    cursor: not-allowed;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+    .hero-section {
+        text-align: center;
+        padding: 60px 0;
+    }
+    .hero-title {
+        font-size: 34px;
+    }
+    .hero-text {
+        margin: auto;
+    }
+    .hero-section .carousel-item img {
+        height: 320px;
+    }
+    .hero-section .hero-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    .section-title {
+        font-size: 24px;
+    }
+    .product-card img {
+        height: 220px;
+    }
+    .hero-section .carousel-item img {
+        height: 240px;
+    }
+    .hero-section .carousel-caption {
+        left: 5%;
+        max-width: 90%;
+        text-align: center;
+    }
+    .hero-section .hero-title {
+        font-size: 24px;
+    }
+    .hero-section .hero-text {
+        font-size: 14px;
+    }
+}

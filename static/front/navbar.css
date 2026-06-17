@@ -1,0 +1,89 @@
+/* =========================
+   NAVBAR BASE
+========================= */
+.navbar {
+    background: #171717;
+    color: #fff;
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 0.3s ease;
+    color: #fff;
+}
+.navbar-brand:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+.nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+.nav-link:hover {
+    color: #ffffff;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* =========================
+   TOGGLER
+========================= */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* =========================
+   ICON BUTTONS (Cart, Heart, User)
+========================= */
+.nav-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s ease;
+    position: relative;
+}
+.nav-icon:hover {
+    background: #b6b6b6;
+    transform: translateY(-2px);
+}
+
+/* Badge for cart count */
+.nav-icon .badge {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+}
+
+.cart-badge{
+    font-size:.7rem;
+    min-width:18px;
+    height:18px;
+    line-height:18px;
+    padding:0 5px;
+}

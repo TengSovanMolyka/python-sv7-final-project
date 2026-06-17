@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MFS | All Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='front/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='front/product_card.css') }}">
+</head>
+
+<body>
+
+{% include 'front/share/navbar.html' %}
+
+<!-- HERO SLIDER -->
+<section class="hero-section">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="https://images.pexels.com/photos/994234/pexels-photo-994234.jpeg"
+             class="d-block w-100" alt="Fashion Banner">
+        <div class="carousel-caption text-start">
+          <span class="badge bg-light text-dark mb-3 px-3 py-2">New Collection</span>
+          <h1 class="hero-title">Explore Modern Fashion Styles</h1>
+          <p class="hero-text">Shop trending outfits, sneakers, handbags, accessories, and streetwear collections.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1521334884684-d80222895322"
+             class="d-block w-100" alt="Sneakers Banner">
+        <div class="carousel-caption text-start">
+          <span class="badge bg-light text-dark mb-3 px-3 py-2">Sneakers Drop</span>
+          <h1 class="hero-title">Step Into Style</h1>
+          <p class="hero-text">Discover premium sneakers designed for comfort and fashion.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+             class="d-block w-100" alt="Accessories Banner">
+        <div class="carousel-caption text-start">
+          <span class="badge bg-light text-dark mb-3 px-3 py-2">Accessories</span>
+          <h1 class="hero-title">Complete Your Look</h1>
+          <p class="hero-text">Handbags, watches, and accessories to elevate your outfit.</p>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- FILTER SIDEBAR -->
+      <div class="col-lg-3">
+        <div class="bg-white p-4 rounded-4 shadow-sm">
+          <h4 class="fw-bold mb-4">Filters</h4>
+
+          <!-- Live Search -->
+          <div class="mb-4">
+            <label class="form-label fw-bold">Search</label>
+            <input type="text" id="liveSearch" class="form-control" placeholder="Search products...">
+          </div>
+
+          <!-- Category -->
+          <div class="mb-4">
+            <label class="form-label fw-bold">Category</label>
+            <select class="form-select" id="filterCategory">
+              <option value="all">All</option>
+              <option value="women">women</option>
+              <option value="men">men</option>
+              <option value="kids">kids</option>
+            </select>
+          </div>
+
+          <!-- Price -->
+          <div class="mb-4">
+            <label class="form-label fw-bold">Price</label>
+            <select class="form-select" id="filterPrice">
+              <option value="featured">Featured</option>
+              <option value="low">Low Price</option>
+              <option value="high">High Price</option>
+            </select>
+          </div>
+
+          <button class="btn btn-dark w-100" id="applyFilters">Apply Filters</button>
+        </div>
+      </div>
+
+      <!-- PRODUCT LIST -->
+      <div class="col-lg-9">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h2 class="fw-bold">Trending Products</h2>
+            <p class="text-muted mb-0">Fashion styles everyone loves</p>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row g-4" id="productContainer">
+          {% for product in products %}
+          <div class="col-md-6 col-xl-4 product-item"
+               data-price="{{ product.price }}"
+               data-category="{{ product.category|lower }}"
+               data-title="{{ product.title|lower }}">
+            <div class="card product-card border-0 shadow-sm h-100">
+              <img src="{{ product.image }}" class="card-img-top" alt="{{ product.category }}">
+              <div class="card-body">
+                <small class="text-muted">{{ product.category }}</small>
+                <h5 class="mt-2">{{ product.title }}</h5>
+                <p class="text-muted pro-description">{{ product.description }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center gap-2">
+                    <h4 class="mb-0">$ {{ product.price }}</h4>
+                    <span class="text-muted text-decoration-line-through">$ {{ product.oldPrice }}</span>
+                  </div>
+                  <span class="badge bg-dark">{{ product.rating }} ⭐️</span>
+                </div>
+                <a class="btn btn-dark w-100 mt-3" href="/product/{{ product._id }}">View Product</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% include 'front/share/footer.html' %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Filter + Pagination -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const searchInput       = document.getElementById("liveSearch");
+    const categorySelect    = document.getElementById("filterCategory");
+    const priceSelect       = document.getElementById("filterPrice");
+    const applyBtn          = document.getElementById("applyFilters");
+
+    const productContainer  = document.getElementById("productContainer");
+    const paginationContainer = document.querySelector(".pagination");
+
+    const itemsPerPage = 9;
+    let allProducts    = Array.from(document.querySelectorAll(".product-item"));
+    let filteredProducts = [...allProducts];
+    let currentPage    = 1;
+
+    // Helper: get product price
+    function getProductPrice(item) {
+        return parseFloat(item.dataset.price) || 0;
+    }
+
+    // Show products for a given page
+    function showPage(page) {
+        currentPage = page;
+
+        // Hide all
+        allProducts.forEach(product => product.style.display = "none");
+
+        // Slice filtered products
+        const start = (page - 1) * itemsPerPage;
+        const end   = start + itemsPerPage;
+
+        filteredProducts.slice(start, end).forEach(product => {
+            product.style.display = "block";
+        });
+
+        updatePagination();
+
+        // Scroll to top of product section
+        productContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // Build pagination dynamically
+    function updatePagination() {
+        const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+        let html = "";
+
+        // Previous
+        html += `
+            <li class="page-item ${currentPage === 1 ? "disabled text-secondary" : ""}">
+                <a class="page-link" href="#" data-page="prev">Previous</a>
+            </li>
+        `;
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+            html += `
+                <li class="page-item ${i === currentPage ? "active" : ""}">
+                    <a class="page-link" href="#" data-page="${i}">${i}</a>
+                </li>
+            `;
+        }
+
+        // Next
+        html += `
+            <li class="page-item ${currentPage === totalPages || totalPages === 0 ? "disabled text-secondary" : ""}">
+                <a class="page-link" href="#" data-page="next">Next</a>
+            </li>
+        `;
+
+        paginationContainer.innerHTML = html;
+    }
+
+    // Apply filters
+    function applyFilters() {
+        const query    = searchInput.value.toLowerCase().trim();
+        const category = categorySelect.value.toLowerCase();
+        const price    = priceSelect.value;
+
+        filteredProducts = allProducts.filter(product => {
+            const title = (product.dataset.title || "").toLowerCase();
+            const cat   = (product.dataset.category || "").toLowerCase();
+            return title.includes(query) && (category === "all" || cat === category);
+        });
+
+        // Sort by price
+        if (price === "low") {
+            filteredProducts.sort((a, b) => getProductPrice(a) - getProductPrice(b));
+        } else if (price === "high") {
+            filteredProducts.sort((a, b) => getProductPrice(b) - getProductPrice(a));
+        }
+
+        // Reset container
+        productContainer.innerHTML = "";
+        filteredProducts.forEach(product => productContainer.appendChild(product));
+
+        // Empty state
+        if (filteredProducts.length === 0) {
+            productContainer.innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <h4>No products found</h4>
+                </div>
+            `;
+            paginationContainer.innerHTML = "";
+            return;
+        }
+
+        // Reset to page 1
+        showPage(1);
+    }
+
+    // Event listeners
+    searchInput.addEventListener("keyup", applyFilters);
+    categorySelect.addEventListener("change", applyFilters);
+    priceSelect.addEventListener("change", applyFilters);
+    applyBtn.addEventListener("click", applyFilters);
+
+    // Pagination click handler
+    paginationContainer.addEventListener("click", function (e) {
+        e.preventDefault();
+        const page = e.target.dataset.page;
+        if (!page) return;
+
+        const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+        if (page === "prev" && currentPage > 1) {
+            showPage(currentPage - 1);
+        } else if (page === "next" && currentPage < totalPages) {
+            showPage(currentPage + 1);
+        } else if (!isNaN(page)) {
+            showPage(parseInt(page));
+        }
+    });
+
+    // Initial load
+    showPage(1);
+
+});
+</script>
+
+</body>
+</html>

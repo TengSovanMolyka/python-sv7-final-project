@@ -1,0 +1,753 @@
+[
+  {
+    "order_id": 708108,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1620,
+    "shipping": 0,
+    "total": 1620
+  },
+  {
+    "order_id": 329269,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1620,
+    "shipping": 0,
+    "total": 1620
+  },
+  {
+    "order_id": 293146,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1620,
+    "shipping": 0,
+    "total": 1620
+  },
+  {
+    "order_id": 906516,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1620,
+    "shipping": 0,
+    "total": 1620
+  },
+  {
+    "order_id": 971392,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1620,
+    "shipping": 0,
+    "total": 1620
+  },
+  {
+    "order_id": 658283,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1620,
+    "shipping": 0,
+    "total": 1620
+  },
+  {
+    "order_id": 540971,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1620,
+    "shipping": 0,
+    "total": 1620
+  },
+  {
+    "order_id": 309505,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 3,
+        "title": "Compact fashion t-shirt",
+        "category": "women",
+        "price": 55.99,
+        "qty": 12,
+        "brand": "TrendyTees",
+        "image": "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
+        "stock": 100,
+        "discountedPrice": 50.39
+      },
+      {
+        "_id": 6,
+        "title": "Yellow Hoody",
+        "category": "men",
+        "price": 180,
+        "qty": 21,
+        "brand": "UrbanVibe",
+        "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
+        "stock": 40,
+        "discountedPrice": 162
+      }
+    ],
+    "subtotal": 4006.6800000000003,
+    "shipping": 0,
+    "total": 4006.6800000000003
+  },
+  {
+    "order_id": 928381,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [],
+    "subtotal": 0,
+    "shipping": 0,
+    "total": 0
+  },
+  {
+    "order_id": 851911,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 1,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 135,
+    "shipping": 3,
+    "total": 138
+  },
+  {
+    "order_id": 391791,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 2,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 270,
+    "shipping": 3,
+    "total": 273,
+    "status": "Processing"
+  },
+  {
+    "order_id": 142606,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 11,
+        "title": "Jamdani Saree",
+        "category": "women",
+        "price": 800,
+        "qty": 8,
+        "brand": "TraditionalThreads",
+        "image": "https://images.pexels.com/photos/3363204/pexels-photo-3363204.jpeg",
+        "stock": 10,
+        "discountedPrice": 720
+      }
+    ],
+    "subtotal": 5760,
+    "shipping": 0,
+    "total": 5760,
+    "status": "Processing"
+  },
+  {
+    "order_id": 935862,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 13,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1755,
+    "shipping": 0,
+    "total": 1755,
+    "status": "Processing"
+  },
+  {
+    "order_id": 645390,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 2,
+        "title": "Jacket with wollen hat",
+        "category": "women",
+        "price": 65,
+        "qty": 3,
+        "brand": "CozyWear",
+        "image": "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
+        "stock": 30,
+        "discountedPrice": 58.5
+      },
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 1,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      },
+      {
+        "_id": 3,
+        "title": "Compact fashion t-shirt",
+        "category": "women",
+        "price": 55.99,
+        "qty": 13,
+        "brand": "TrendyTees",
+        "image": "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
+        "stock": 100,
+        "discountedPrice": 50.39
+      }
+    ],
+    "subtotal": 965.57,
+    "shipping": 0,
+    "total": 965.57,
+    "status": "Processing"
+  },
+  {
+    "order_id": 725646,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "khqr",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 14,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      },
+      {
+        "_id": 8,
+        "title": "Gouwn with Red velvet",
+        "category": "women",
+        "price": 350,
+        "qty": 14,
+        "brand": "LuxuryDress",
+        "image": "https://images.pexels.com/photos/2233703/pexels-photo-2233703.jpeg",
+        "stock": 15,
+        "discountedPrice": 315
+      }
+    ],
+    "subtotal": 6300,
+    "shipping": 0,
+    "total": 6300,
+    "status": "Processing"
+  },
+  {
+    "order_id": 354519,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 1,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 135,
+    "shipping": 3,
+    "total": 138,
+    "status": "Processing"
+  },
+  {
+    "order_id": 971780,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 6,
+        "title": "Yellow Hoody",
+        "category": "men",
+        "price": 180,
+        "qty": 1,
+        "brand": "UrbanVibe",
+        "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
+        "stock": 40,
+        "discountedPrice": 162
+      }
+    ],
+    "subtotal": 162,
+    "shipping": 3,
+    "total": 165,
+    "status": "Processing"
+  },
+  {
+    "order_id": 764526,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 1,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 135,
+    "shipping": 3,
+    "total": 138,
+    "status": "Processing"
+  },
+  {
+    "order_id": 642301,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 1620,
+    "shipping": 0,
+    "total": 1620,
+    "status": "Processing"
+  },
+  {
+    "order_id": 441582,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "khqr",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 1,
+        "size": "L",
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      },
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 12,
+        "size": "S",
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      },
+      {
+        "_id": 2,
+        "title": "Jacket with wollen hat",
+        "category": "women",
+        "price": 65,
+        "qty": 25,
+        "size": "XL",
+        "brand": "CozyWear",
+        "image": "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
+        "stock": 30,
+        "discountedPrice": 58.5
+      },
+      {
+        "_id": 2,
+        "title": "Jacket with wollen hat",
+        "category": "women",
+        "price": 65,
+        "qty": 13,
+        "size": "M",
+        "brand": "CozyWear",
+        "image": "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
+        "stock": 30,
+        "discountedPrice": 58.5
+      }
+    ],
+    "subtotal": 3978.0,
+    "shipping": 0,
+    "total": 3978.0,
+    "status": "Processing"
+  },
+  {
+    "order_id": 143728,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "visa",
+    "items": [
+      {
+        "_id": 2,
+        "title": "Jacket with wollen hat",
+        "category": "women",
+        "price": 65,
+        "qty": 5,
+        "size": "L",
+        "brand": "CozyWear",
+        "image": "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
+        "stock": 5,
+        "discountedPrice": 58.5
+      }
+    ],
+    "subtotal": 292.5,
+    "shipping": 3,
+    "total": 295.5,
+    "status": "Processing"
+  },
+  {
+    "order_id": 525141,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [],
+    "subtotal": 0,
+    "shipping": 0,
+    "total": 0,
+    "status": "Processing"
+  },
+  {
+    "order_id": 719707,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [],
+    "subtotal": 0,
+    "shipping": 0,
+    "total": 0,
+    "status": "Processing"
+  },
+  {
+    "order_id": 651446,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 35,
+        "size": "L",
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 50,
+        "discountedPrice": 135
+      }
+    ],
+    "subtotal": 4725,
+    "shipping": 0,
+    "total": 4725,
+    "status": "Processing"
+  },
+  {
+    "order_id": 230774,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "khqr",
+    "items": [
+      {
+        "_id": 1,
+        "title": "Long sleeve Jacket",
+        "category": "women",
+        "price": 150,
+        "qty": 15,
+        "size": "M",
+        "brand": "FashionTrend",
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "stock": 15,
+        "discountedPrice": 135
+      },
+      {
+        "_id": 2,
+        "title": "Jacket with wollen hat",
+        "category": "women",
+        "price": 65,
+        "qty": 15,
+        "size": "M",
+        "brand": "CozyWear",
+        "image": "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
+        "stock": 30,
+        "discountedPrice": 58.5
+      },
+      {
+        "_id": 2,
+        "title": "Jacket with wollen hat",
+        "category": "women",
+        "price": 65,
+        "qty": 8,
+        "size": "XL",
+        "brand": "CozyWear",
+        "image": "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
+        "stock": 30,
+        "discountedPrice": 58.5
+      }
+    ],
+    "subtotal": 3370.5,
+    "shipping": 0,
+    "total": 3370.5,
+    "status": "Processing"
+  },
+  {
+    "order_id": 361867,
+    "customer_name": "Teng Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "khqr",
+    "items": [
+      {
+        "_id": 11,
+        "title": "Jamdani Saree",
+        "category": "women",
+        "price": 800,
+        "qty": 10,
+        "size": "One Size",
+        "brand": "TraditionalThreads",
+        "image": "https://images.pexels.com/photos/3363204/pexels-photo-3363204.jpeg",
+        "stock": 10,
+        "discountedPrice": 720
+      },
+      {
+        "_id": 20,
+        "title": "Formal for Men",
+        "category": "men",
+        "price": 490,
+        "qty": 17,
+        "size": "XL",
+        "brand": "FormalFit",
+        "image": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg",
+        "stock": 20,
+        "discountedPrice": 441
+      }
+    ],
+    "subtotal": 14697,
+    "shipping": 0,
+    "total": 14697,
+    "status": "Processing"
+  },
+  {
+    "order_id": 933619,
+    "customer_name": "Sovanmolyka",
+    "phone": "+855312422228",
+    "email": "tengsovanmolyka09@gmail.com",
+    "address": "No. 86A, Street 110\r\nRussian Federation Blvd (110), Phnom Penh",
+    "payment_method": "cod",
+    "items": [
+      {
+        "_id": 11,
+        "title": "Jamdani Saree",
+        "category": "women",
+        "price": 800,
+        "qty": 8,
+        "size": "One Size",
+        "brand": "TraditionalThreads",
+        "image": "https://images.pexels.com/photos/3363204/pexels-photo-3363204.jpeg",
+        "stock": 10,
+        "discountedPrice": 720
+      }
+    ],
+    "subtotal": 5760,
+    "shipping": 0,
+    "total": 5760,
+    "status": "Processing"
+  }
+]

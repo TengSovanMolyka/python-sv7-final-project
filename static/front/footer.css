@@ -1,0 +1,133 @@
+/* =========================
+   FOOTER BASE
+========================= */
+.footer-section {
+    background: #171717;
+    color: #fff;
+    padding-top: 70px;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   BRAND
+========================= */
+.footer-logo {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+.footer-logo:hover {
+    opacity: 0.8;
+}
+
+.footer-text {
+    color: #cbd5e1;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* =========================
+   PAYMENT BADGES
+========================= */
+.payment-box {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.payment-box span {
+    background: #373737;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #e5e7eb;
+    transition: 0.3s ease;
+}
+.payment-box span:hover {
+    transform: scale(1.0);
+    background: #545454;
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+.footer-title {
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* =========================
+   LINKS
+========================= */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    margin-bottom: 12px;
+}
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.footer-contact p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.footer-contact i {
+    font-size: 1rem;
+    margin-right: 8px;
+    color: #cbd5e1;
+    transition: 0.3s ease;
+}
+.footer-contact i:hover {
+    color: #fff;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 60px;
+    padding: 20px 0;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: center;
+    }
+    .payment-box {
+        justify-content: center;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

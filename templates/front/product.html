@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MFS | {{ product.title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='front/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='front/product_card.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='front/product_info.css') }}">
+</head>
+
+<body>
+
+{% include 'front/share/navbar.html' %}
+
+<main class="container py-5">
+
+  <!-- Breadcrumb -->
+  <nav class="mb-4">
+    <a class="text-dark fw-bold" href="/">Home</a>
+    <span class="mx-2">/</span>
+    <a class="text-dark fw-bold" href="/products">{{ product.category|capitalize }}</a>
+    <span class="mx-2">/</span>
+    <span class="text-muted">{{ product.title }}</span>
+  </nav>
+
+  <!-- Product Details -->
+  <section class="bg-white rounded-4 shadow-sm p-4 mb-5">
+    <div class="row g-5">
+      <!-- Image -->
+      <div class="col-lg-6">
+        <img src="{{ product.image }}" class="img-fluid rounded-4 mb-3" alt="{{ product.title }}">
+      </div>
+
+      <!-- Info -->
+      <div class="col-lg-6">
+        {% if product.isNew %}
+          <span class="badge bg-dark mb-3">New Arrival</span>
+        {% endif %}
+        <h1 class="fw-bold mb-3">{{ product.title }}</h1>
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <span class="badge bg-success">
+              <i class="fas fa-star"></i> {{ product.rating }} Rating</span>
+          <span class="badge bg-primary">{{ product.stock }} In Stock</span>
+        </div>
+
+        <p class="text-muted">{{ product.description }}</p>
+
+        <div class="d-flex align-items-center gap-3 my-4">
+          <h2 class="product-price mb-0">$ {{ product.price }}</h2>
+          <span class="product-old-price text-muted text-decoration-line-through">$ {{ product.oldPrice }}</span>
+          <span class="product-discount">Now $ {{ product.discountedPrice }}</span>
+        </div>
+
+        <!-- Size -->
+        <div class="mb-4">
+          <h5 class="fw-bold mb-2">Select Size</h5>
+          <div class="d-flex gap-2 flex-wrap size-selector">
+            {% for s in product.size %}
+              <button type="button" data-size="{{ s }}"
+                      class="btn btn-outline-dark size-btn">{{ s }}</button>
+            {% endfor %}
+          </div>
+          <input type="hidden" name="size" id="selectedSize">
+        </div>
+
+        <!-- Quantity -->
+        <div class="quantity mb-4">
+          <h5 class="fw-bold mb-2">Quantity</h5>
+          <input type="number" id="quantity" class="form-control w-70" value="1" min="1" max="{{ product.stock }}">
+          <small class="text-muted">Available: {{ product.stock }}</small>
+        </div>
+
+        <!-- Features -->
+        <div class="mb-4">
+          <h5 class="fw-bold mb-2">Product Highlights</h5>
+          <ul class="text-muted">
+            <li>Category: {{ product.category|capitalize }}</li>
+            <li>Type: {{ product.type }}</li>
+            <li>Brand: {{ product.brand }}</li>
+            <li>Popularity: {{ product.sold if product.sold else 'N/A' }} sold</li>
+            <li>Wishlist: {{ product.wishlist if product.wishlist else 'N/A' }} users</li>
+          </ul>
+        </div>
+
+        <!-- Actions -->
+        <div class="d-grid gap-3">
+          {% if product.stock > 0 %}
+            <form action="/cart/add" method="POST">
+              <input type="hidden" name="product_id" value="{{ product._id }}">
+              <input type="hidden" name="quantity" id="cartQuantity" value="1">
+              <input type="hidden" name="size" id="cartSize">
+              <button type="submit" class="btn btn-dark w-100">Add To Cart</button>
+            </form>
+            <form action="/checkout" method="GET">
+              <input type="hidden" name="product_id" value="{{ product._id }}">
+              <input type="hidden" name="quantity" id="buyQuantity" value="1">
+              <input type="hidden" name="size" id="buySize">
+              <button type="submit" class="btn btn-outline-dark w-100">Buy Now</button>
+            </form>
+          {% else %}
+            <button class="btn btn-secondary btn-lg w-100" disabled>Out of Stock</button>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products Carousel -->
+  <section>
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <div>
+        <p class="eyebrow">Related products</p>
+        <h2 class="fw-bold mb-0">Similar Styles</h2>
+      </div>
+      <a class="fw-bold text-dark" href="/products">View All</a>
+    </div>
+
+    <div id="relatedCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        {% for chunk in related_product|batch(4) %}
+          <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+            <div class="row g-4">
+              {% for product in chunk %}
+              <div class="col-md-6 col-lg-3">
+                <div class="card product-card border-0 shadow-sm h-100">
+                  <img src="{{ product.image }}" class="card-img-top" alt="{{ product.title }}">
+                  <div class="card-body">
+                    <p class="text-muted">{{ product.category }}</p>
+                    <h5 class="mt-2">{{ product.title }}</h5>
+                    <h4 class="text-dark">$ {{ product.price }}</h4>
+                    <a class="btn btn-dark w-100 mt-3" href="/product/{{ product._id }}">View Product</a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#relatedCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#relatedCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+{% include 'front/share/footer.html' %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const sizeButtons = document.querySelectorAll('.size-btn');
+const selectedSize = document.getElementById('selectedSize');
+
+sizeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    sizeButtons.forEach(b => {
+      b.classList.remove('btn-dark');
+      b.classList.add('btn-outline-dark');
+    });
+
+    btn.classList.remove('btn-outline-dark');
+    btn.classList.add('btn-dark');
+
+    selectedSize.value = btn.dataset.size;
+  });
+});
+
+const cartSize = document.getElementById('cartSize');
+const buySize  = document.getElementById('buySize');
+
+sizeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    sizeButtons.forEach(b => {
+      b.classList.remove('btn-dark');
+      b.classList.add('btn-outline-dark');
+    });
+
+    btn.classList.remove('btn-outline-dark');
+    btn.classList.add('btn-dark');
+
+    selectedSize.value = btn.dataset.size;
+
+    cartSize.value = btn.dataset.size;
+    buySize.value  = btn.dataset.size;
+  });
+});
+</script>
+
+<script>
+  const qtyInput = document.getElementById('quantity');
+  const cartQty  = document.getElementById('cartQuantity');
+  const buyQty   = document.getElementById('buyQuantity');
+
+  if (qtyInput) {
+    qtyInput.addEventListener('input', () => {
+      let maxStock = parseInt(qtyInput.max);
+      let val = parseInt(qtyInput.value);
+
+      if (val > maxStock) {
+        qtyInput.value = maxStock;
+      }
+      if (val < 1) {
+        qtyInput.value = 1;
+      }
+
+      if (cartQty) cartQty.value = qtyInput.value;
+      if (buyQty) buyQty.value  = qtyInput.value;
+    });
+  }
+</script>
+
+</body>
+</html>

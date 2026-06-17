@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='front/navbar.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg shadow-sm py-3">
+        <div class="container">
+
+            <!-- LOGO -->
+            <a href="/" class="navbar-brand fw-bold fs-3">
+                La Beauté
+            </a>
+
+            <!-- MOBILE TOGGLER -->
+            <button class="navbar-toggler border-0 shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- NAVBAR MENU -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <!-- CENTER MENU -->
+                <ul class="navbar-nav mx-auto gap-lg-3 fw-bold fs-5">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/products" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/cart" class="nav-link">Cart</a>
+                    </li>
+                </ul>
+
+                <!-- RIGHT SIDE ICONS -->
+                <div class="d-flex gap-2 mt-3 mt-lg-0">
+
+                    <!-- Cart -->
+                    <a href="/cart" class="btn btn-light position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        {% if cart_count > 0 %}
+                        <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{ cart_count }}
+                        </span>
+                        {% endif %}
+                    </a>
+
+                    <!-- Favorite -->
+                    <a href="/wishlist" class="btn btn-light">
+                        <i class="fas fa-heart"></i>
+                    </a>
+
+                    <!-- User -->
+                    <a href="/account" class="btn btn-light">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
