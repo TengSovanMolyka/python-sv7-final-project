@@ -12,29 +12,10 @@ from product import (products as pro,
                      update_stock)
 import json, random, os, uuid
 import requests
-
 from werkzeug.utils import secure_filename
+
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # needed for flash messages
-
-# ==============================================================================
-USERS = []
-ORDERS = []
-def save_user(user):
-    USERS.append(user)
-  
-def get_user(username):
-    for u in USERS:
-        if u["username"] == username:
-            return u
-    return None
-
-def save_order(order):
-    ORDERS.append(order)
-    print("Order saved:", order)
-
-def get_orders(user_id):
-    return [o for o in ORDERS if o["user_id"] == user_id]
 
 # ==============================================================================
 # USERS
@@ -75,8 +56,8 @@ def load_orders():
 # ==============================================================================
 # TELEGRAM BOT FUNCTION
 # ==============================================================================
-TELEGRAM_TOKEN = "8321967454:AAG4oEJUxN3jEAzznhwh1T1o__M9Wsppicc"
-CHAT_ID = -1004420539883
+TELEGRAM_TOKEN = "8321967454:AAFdiaaT3kFD47xJXdbb-wD33hDfSYN8IgY"
+CHAT_ID = "1009212249"
 
 # ==============================================================================
 # TELEGRAM BOT NOTIFICATIONS
