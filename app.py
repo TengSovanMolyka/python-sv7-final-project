@@ -34,21 +34,17 @@ def save_users(users):
 # ORDERS
 # ==============================================================================
 ORDERS_FILE = "orders.json"
-# def save_order(order):
-#     if os.path.exists(ORDERS_FILE):
-#         with open(ORDERS_FILE, "r") as f:
-#             orders = json.load(f)
-#     else:
-#         orders = []
-
-#     orders.append(order)
-
-#     with open(ORDERS_FILE, "w") as f:
-#         json.dump(orders, f, indent=2)
 def save_order(order):
-    # Vercel does not allow writing to orders.json
-    print("Order received:", order["order_id"])
-    return True
+    if os.path.exists(ORDERS_FILE):
+        with open(ORDERS_FILE, "r") as f:
+            orders = json.load(f)
+    else:
+        orders = []
+
+    orders.append(order)
+
+    with open(ORDERS_FILE, "w") as f:
+        json.dump(orders, f, indent=2)
 
 def load_orders():
     if os.path.exists(ORDERS_FILE):
