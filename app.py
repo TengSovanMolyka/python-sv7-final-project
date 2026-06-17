@@ -35,17 +35,21 @@ def save_users(users):
 # ORDERS
 # ==============================================================================
 ORDERS_FILE = "orders.json"
+# def save_order(order):
+#     if os.path.exists(ORDERS_FILE):
+#         with open(ORDERS_FILE, "r") as f:
+#             orders = json.load(f)
+#     else:
+#         orders = []
+
+#     orders.append(order)
+
+#     with open(ORDERS_FILE, "w") as f:
+#         json.dump(orders, f, indent=2)
 def save_order(order):
-    if os.path.exists(ORDERS_FILE):
-        with open(ORDERS_FILE, "r") as f:
-            orders = json.load(f)
-    else:
-        orders = []
-
-    orders.append(order)
-
-    with open(ORDERS_FILE, "w") as f:
-        json.dump(orders, f, indent=2)
+    # Vercel does not allow writing to orders.json
+    print("Order received:", order["order_id"])
+    return True
 
 def load_orders():
     if os.path.exists(ORDERS_FILE):
@@ -442,16 +446,24 @@ def checkout_confirm():
             )
             return redirect(url_for("cart"))
 
-    save_order(order)
+    # save_order(order)
 
-    # Reduce stock
-    for item in data["cart_products"]:
-        update_stock(
-            item["_id"],
-            item["qty"]
-        )
+    # # Reduce stock
+    # for item in data["cart_products"]:
+    #     update_stock(
+    #         item["_id"],
+    #         item["qty"]
+    #     )
 
-    send_order_to_telegram(order)
+    # send_order_to_telegram(order)
+
+    # Vercel cannot save orders.json
+    try:
+        send_order_to_telegram(order)
+    except Exception as e:
+        print("Telegram Error:", e)
+    # Disable stock update because it writes to file
+    # update_stock(...)
 
     resp = make_response(
         render_template("front/orders/order_success.html",
