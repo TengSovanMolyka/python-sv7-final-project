@@ -13,7 +13,6 @@ from product import (products as pro,
 import json, random, os, uuid
 import requests
 from werkzeug.utils import secure_filename
-
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # needed for flash messages
 
@@ -137,8 +136,12 @@ Thank you for your order, and we can't wait to serve you again.
         print("Telegram Status:", r.status_code)
         print("Telegram Response:", r.text)
 
+        return r.ok
+
     except Exception as e:
         print("Telegram Error:", e)
+
+        return False
 
 # ==============================================================================
 # HOME PAGE
